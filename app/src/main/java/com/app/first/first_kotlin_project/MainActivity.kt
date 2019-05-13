@@ -25,5 +25,12 @@ class MainActivity : AppCompatActivity() {
         val buttonText = button.text
         textView.text = buttonText
         Log.d("MainActivity",textViewText)
+
+        var isDoorOpen:Boolean = false
+        var currentMonthDays: Int = 31
+        val days:String = currentMonthDays.toString()
+        val currMonthDaysString:String = "28"
+        currentMonthDays = currMonthDaysString.toInt()
+        Log.d("MainActivity",currentMonthDays.toString())
     }
 }
