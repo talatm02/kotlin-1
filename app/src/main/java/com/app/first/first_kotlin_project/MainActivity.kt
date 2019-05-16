@@ -26,11 +26,21 @@ class MainActivity : AppCompatActivity() {
         textView.text = buttonText
         Log.d("MainActivity",textViewText)
 
+
         var isDoorOpen:Boolean = false
         var currentMonthDays: Int = 31
         val days:String = currentMonthDays.toString()
         val currMonthDaysString:String = "28"
         currentMonthDays = currMonthDaysString.toInt()
+
         Log.d("MainActivity",currentMonthDays.toString())
+
+    }
+
+    fun collectionAction(view:View) {
+        val weekDays = listOf<String>("Saturday", "Sunday", "Monday", "Tuesday", "Wedensday", "Thursday")
+        var currentMonth = arrayOf<Int>(1,2,4,5,6,7,8,9)
+        var trueOrFalseArrray = booleanArrayOf()
+        Log.d("MainActivity",weekDays.get(2))
     }
 }
