@@ -20,20 +20,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun pressButtonAction(view:View){
-        val textViewText = textView.text.toString()
-        val button = view as Button
-        val buttonText = button.text
-        textView.text = buttonText
-        Log.d("MainActivity",textViewText)
+//        val textViewText = textView.text.toString()
+//        val button = view as Button
+//        val buttonText = button.text
+//        textView.text = buttonText
+//        Log.d("MainActivity",textViewText)
+//
+//
+//        var isDoorOpen:Boolean = false
+//        var currentMonthDays: Int = 31
+//        val days:String = currentMonthDays.toString()
+//        val currMonthDaysString:String = "28"
+//        currentMonthDays = currMonthDaysString.toInt()
+//
+//        Log.d("MainActivity",currentMonthDays.toString())
+        fuzzBizz()
 
-
-        var isDoorOpen:Boolean = false
-        var currentMonthDays: Int = 31
-        val days:String = currentMonthDays.toString()
-        val currMonthDaysString:String = "28"
-        currentMonthDays = currMonthDaysString.toInt()
-
-        Log.d("MainActivity",currentMonthDays.toString())
 
     }
 
@@ -43,4 +45,26 @@ class MainActivity : AppCompatActivity() {
         var trueOrFalseArrray = booleanArrayOf()
         Log.d("MainActivity",weekDays.get(2))
     }
+
+    fun fuzzBizz(){
+        var current: Int = 0
+        var remainderOfThree : Int
+        var remainderOfFive : Int
+
+        while (current <= 100){
+            current += 1
+            remainderOfThree = current.rem(3)
+            remainderOfFive = current.rem(5)
+            if (remainderOfThree == 0 && remainderOfFive == 0){
+                Log.d("MainActivity","FizzBuzz " + current.toString())
+            } else if (remainderOfThree == 0 && remainderOfFive != 0){
+                Log.d("MainActivity","Fizz " + current.toString())
+
+            } else if (remainderOfThree != 0 && remainderOfFive == 0) {
+                Log.d("MainActivity","Buzz " + current.toString())
+            }
+        }
+    }
+
+
 }
